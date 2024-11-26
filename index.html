@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Custom Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo">R.S Creative Designs</li>
+            <li class="nav-links"><a href="#section1">Home</a></li>
+            <li class="nav-links"><a href="#section2">Services</a></li>
+            <li class="nav-links"><a href="#section3">Portfolio</a></li>
+            <li class="nav-links"><a href="#section4">Team</a></li>
+            <li class="nav-links"><a href="#section5">Contact</a></li>
+            <img class="menu-toggle" id="menu-toggle" src="assets/menu-fill.svg" width="30px">
+        </ul>
+    </nav>
+    
+    <ul class="sidebar" id="menu">
+        <li class="nav-links"><a href="#section1">Home</a></li>
+        <li class="nav-links"><a href="#section2">Services</a></li>
+        <li class="nav-links"><a href="#section3">Portfolio</a></li>
+        <li class="nav-links"><a href="#section4">Team</a></li>
+        <li class="nav-links"><a href="#section5">Contact</a></li>
+    </ul>
+
+    <div class="hero-section" id="section1"></div>
+
+    <div class="container" id="section2">
+        <h1>SERVICES</h1>
+        <div class="container-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ex minima sequi dicta architecto. Harum nam nisi commodi repellendus suscipit unde quidem quasi a ut perferendis nulla, minus consectetur cumque?</div>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <i class="ri-computer-line"></i>
+                <h2>Web Designer</h2>
+                <p>Lorem ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet</p>            
+            </div>
+            <div class="service-card">
+                <i class="ri-camera-line"></i>
+                <h2>Photographer</h2>
+                <p>Lorem ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet</p>            
+            </div>
+            <div class="service-card">
+                <i class="ri-paint-brush-line"></i>
+                <h2>Graphic Designer</h2>
+                <p>Lorem ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet ipsum dolor sLorem ipsum dolor sit amet</p>            
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="section3">
+        <h1>PORTFOLIO</h1>
+        <div class="container-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, illo. Nam ducimus cupiditate vitae est labore velit et iusto aspernatur porro amet omnis ratione accusamus laudantium atque enim, veniam voluptas!</div>
+
+        <div class="port-tab-container">
+            <div class="port-tab active" onclick="filterSelection('all')">All</div>
+            <div class="port-tab" onclick="filterSelection('web-development')">Web Development</div>
+            <div class="port-tab" onclick="filterSelection('graphic-design')">Graphic Design</div>
+            <div class="port-tab" onclick="filterSelection('web-design')">Web Design</div>
+            <div class="port-tab" onclick="filterSelection('photography')">Photography</div>
+        </div>
+
+        <div class="portfolio-cards">
+            <div class="portfolio-card web-design">
+                <img src="assets/portfolio_img_1.png" alt="">
+                <div class="overlay">
+                    <p>Web Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card graphic-design">
+                <img src="assets/portfolio_img_2.png" alt="">
+                <div class="overlay">
+                    <p>Graphic Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card photography">
+                <img src="assets/portfolio_img_3.png" alt="">
+                <div class="overlay">
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="portfolio-card web-design">
+                <img src="assets/portfolio_img_1.png" alt="">
+                <div class="overlay">
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card graphic-design">
+                <img src="assets/portfolio_img_2.png" alt="">
+                <div class="overlay">
+                    <p>Graphic Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card web-development">
+                <img src="assets/portfolio_img_3.png" alt="">
+                <div class="overlay">
+                    <p>Web Development</p>
+                </div>
+            </div>
+            <div class="portfolio-card web-design">
+                <img src="assets/portfolio_img_3.png" alt="">
+                <div class="overlay">
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card photography">
+                <img src="assets/portfolio_img_3.png" alt="">
+                <div class="overlay">
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="portfolio-card web-development">
+                <img src="assets/portfolio_img_3.png" alt="">
+                <div class="overlay">
+                    <p>Web Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="section4">
+        <h1>TEAM MEMBERS</h1>
+        <div class="container-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In repudiandae incidunt quis aliquam omnis excepturi error sit obcaecati harum sapiente dolore, nulla consectetur eum officia, distinctio tenetur, voluptas magni debitis.</div>
+
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="assets/team-member-1.jpg">
+                <h3 class="team-name">Simon</h3>
+                <div class="team-skill">Web Designer</div>
+                <p>Lorem ipsum dolor ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet amet</p>
+                <div class="socials">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-line"></i>
+                    <i class="ri-github-fill"></i>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="assets/team-member-2.jpg">
+                <h3 class="team-name">James</h3>
+                <div class="team-skill">Graphic Designer</div>
+                <p>Lorem ipsum dolor ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet amet</p>
+                <div class="socials">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-line"></i>
+                    <i class="ri-youtube-line"></i>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="assets/team-member-3.jpg">
+                <h3 class="team-name">Jack</h3>
+                <div class="team-skill">Photographer</div>
+                <p>Lorem ipsum dolor ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet amet</p>
+                <div class="socials">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-line"></i>
+                    <i class="ri-youtube-line"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="section5">
+        <h1>CONTACT</h1>
+        <div class="container-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In repudiandae incidunt quis aliquam omnis excepturi error sit obcaecati harum sapiente dolore, nulla consectetur eum officia, distinctio tenetur, voluptas magni debitis.</div>
+
+        <div class="contact-container">
+            <label for="fullname">Full Name</label>
+            <input type="text" placeholder="Simon Smith" id="fullname" maxlength="20">
+            <label for="email">Email</label>
+            <input type="email" placeholder="simon298@gmail@com" id="email" required>
+            <label for="subject">Subject</label>
+            <input type="text" placeholder="e.g  " id="subject">
+            <label for="message">Message</label>
+            <textarea id="message" rows="10" cols="20"></textarea>
+            <button>Contact us</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <img src="assets/R.S Logo Transparent.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam optio vitae dolore sapiente distinctio eius in, vero commodi repudiandae magni doloribus rem, enim laboriosam! Esse veritatis debitis cum consectetur corrupti.</p>
+            <div class="socials">
+                <i class="ri-facebook-circle-line"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-youtube-line"></i>
+                <i class="ri-github-fill"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Services</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>Graphic Design</li>  
+                <li>Photographer</li>  
+                <li>Web Builder Developer</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h2>Menu</h2>
+            <ul>
+                <li>FAQ</li>
+                <li>Portfolio</li>
+                <li>About</li>  
+                <li>Contact</li>  
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

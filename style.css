@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --default-text-color: #000;
+    --text-color: #fff;
+    --color-1: #0C0C0D;
+    --color-2: #2E4159;
+    --color-3: #496D8C;
+    --color-4: #91B7D9;
+    --color-5: #D5E5F2;
+    --gradient-color-1: #496d8c94;
+    --gradient-color-2: #2e41596e;
+    --gradient-color-3: #5e8db694;
+}
+
+ul, li, a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-color);
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 0 20px;
+    background-color: var(--color-2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul .nav-links :hover {
+    color: var(--color-3);
+    transition: color .3s ease;
+}
+
+nav ul .menu-toggle {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(190deg, var(--gradient-color-1), var(--gradient-color-2)), url(assets/background-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.container h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.container-info {
+    margin-bottom: 30px;
+}
+
+.service-cards, 
+.portfolio-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border: 1px solid var(--color-1);
+    text-align: center;
+}
+
+.service-card:hover {
+    background-color: var(--color-5);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+}
+
+.service-card h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--color-6);
+}
+
+.service-card p {
+    text-align: start;
+}
+
+.port-tab-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.port-tab {
+    border: 1px solid var(--color-1);
+    padding: 10px 20px;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.port-tab:hover, .active {
+    background-color: var(--color-3);
+    color: var(--text-color);
+    border: 1px solid transparent;
+}
+
+.portfolio-card {
+    position: relative;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.portfolio-card .overlay {
+    position: absolute;
+    top: 0;
+    background-color: var(--gradient-color-3);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+.portfolio-card:hover .overlay {
+    transform: scale(1);
+    height: 100%;
+}
+
+.portfolio-card:hover .overlay p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    height: 100%;
+}
+
+.team-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-1);
+}
+
+.team-card .team-name {
+    color: var(--color-5);
+    font-weight: 500;
+}
+
+.team-card .team-skill {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: var(--color-1);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.team-card p {
+    padding: 0 10px 10px;
+}
+
+.team-card .socials {
+    padding: 10px;
+    background-color: var(--color-4);
+    width: 100%;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-card .socials i {
+    border-radius: 50px;
+    padding: 2px;
+    background-color: transparent;
+    transition: color .3s ease-in-out;
+}
+
+.team-card .socials i:hover {
+    color: var(--color-3);
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.contact-container input, textarea {
+    border: none;
+    outline: none;
+    background-color: #dfdfdf;
+    padding: 10px;
+}
+
+.contact-container input::placeholder {
+    font-size: .9rem;
+}
+
+.contact-container button {
+    width: 25%;
+    outline: none;
+    border: none;
+    background-color: var(--color-3);
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: var(--color-4);
+}
+
+#message{
+    resize: none;
+}
+
+footer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    height: 100%;
+    background-color: var(--color-2);
+}
+
+footer .container {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+
+footer .container img {
+    width: 100px;
+}
+
+footer .container p,
+footer .container .socials,
+footer .container h2  {
+    color: var(--text-color);
+}
+
+footer .container .socials {
+    display: flex;
+    font-size: 1.6rem;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer .container .socials i:hover {
+    color: var(--color-4);
+    cursor: pointer;
+}
+
+footer .container ul li:hover {
+    color: var(--color-4);
+    cursor: pointer;
+}
+
+@media (max-width: 1139px) {
+    .service-cards, .team-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .port-tab-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 300px 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: 240px;
+        background-color: var(--color-2);
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    nav ul .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sidebar.show {
+        display: flex;
+    }
+
+    .sidebar.show .nav-links {
+        position: relative;
+    }
+
+    .sidebar.show .nav-links::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to right, var(--color-5), var(--color-4));
+        height: 4px;
+        width: 0;
+        z-index: -1;
+        transition: width .3s ease;
+        border-radius: 20px;
+    }
+
+    .sidebar.show .nav-links:hover::after {
+        width: 70%;
+    }
+
+    nav ul .nav-links {
+        display: none;
+    }
+
+    .service-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .port-tab-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .portfolio-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .portfolio-card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .portfolio-card.show {
+        display: block;
+        opacity: 1;
+    }
+    
+    .portfolio-card .overlay {
+        position: absolute;
+        top: 0;
+        background-color: var(--gradient-color-3);
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        transform: scale(0);
+        transition: .3s ease;
+    }
+    
+    .portfolio-card:hover .overlay {
+        transform: scale(1);
+        height: 100%;
+    }
+    
+    .portfolio-card:hover .overlay p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 1.3rem;
+        height: 100%;
+    }
+
+    .team-cards {
+        display: grid;
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .container:first-child {
+        order: 2;
+        width: 100%;
+    }
+}
+
+@media (min-width: 340px) and (max-width: 620px) {
+    .team-card {
+        margin: auto;
+        width: 85%;
+    }
+
+    .port-tab-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+
+    .port-tab {
+        padding: 10px;
+    }
+    
+    .portfolio-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    
+    .portfolio-card .overlay {
+        position: absolute;
+        top: 0;
+        background-color: var(--gradient-color-3);
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        transform: scale(0);
+        transition: .3s ease;
+    }
+    
+    .portfolio-card:hover .overlay {
+        transform: scale(1);
+        height: 100%;
+    }
+    
+    .portfolio-card:hover .overlay p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 1.3rem;
+        height: 100%;
+    }
+
+    .contact-container button {
+        width: 100%
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    footer .container {
+        width: 100%;
+    }
+}
